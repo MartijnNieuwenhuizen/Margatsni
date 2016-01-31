@@ -1,0 +1,19 @@
+<% include ../layout/header %>
+
+<div id="bgcontainer"></div>
+
+<div class="container"> 
+	<!-- <h2> Inloggen </h2> -->
+
+	<% if(error){ %>
+  		<%= error %>
+	<% } %>
+
+	<form action="<%= req.baseUrl + "/login" %>" method="post" id="bgform">
+		<input type="text" name="email" value="" placeholder="Email">
+		<input type="password" name="password" value="" placeholder="Password">
+		<input type="submit" value="Inloggen">
+	</form>
+</div>
+
+<% include ../layout/footer %>

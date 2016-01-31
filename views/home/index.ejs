@@ -1,0 +1,41 @@
+<% include ../layout/header %>
+<h2> Foto's van iedereen </h2>	
+<nav class="filter">
+	<a class="list active"> </a>
+	<a class="column"> </a>
+</nav>	
+<div id="all" class="row">
+<% photos.forEach(function(photo, index){ %>
+	<div class="col third">
+		<div class="photo-box">
+			<div class="box-header">
+				<p> 
+					<a href="/user/<%= photo.user_id %>/<%= photo.name %>"> <%= photo.name %>   
+					</a>
+				</p>
+			</div>
+			<div class="img" style="background-image:url(images/<%= photo.filename %>);">
+			</div> 
+			<div class="caption">
+				<p> <%= photo.caption %> </p>
+			</div>
+			<div class="comments">
+				<% comments.forEach(function(comments, index, comment){ %>
+					<% if (photo.photoId == comments.photo_id) { %>
+						<p>
+							<%= comments.comment %>  
+							<span> <%= comments.created_at %> </span>
+						</p>
+					<% } %>
+				<% }); %>
+
+			</div>
+			<form action=" <%= req.baseUrl %>/<%= photo.photoId %>/comment" method="post">
+				<input type="text" id="comment" name="comment" value="" required placeholder="Plaats een bericht">
+			</form>
+		</div>
+	</div>
+<% }); %>
+</div>
+<script src="js/script.js"></script>
+<% include ../layout/footer %>

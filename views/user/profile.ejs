@@ -1,0 +1,27 @@
+<% include ../layout/header %>
+
+<h2>Foto's van <%= name %> </h2>
+
+<div class="row">	
+<% photos.forEach(function(photo, index){ %>
+	<div class="col third">
+		<div class="photo-box">
+			<div class="img" style="background-image:url(/images/<%= photo.filename %>);">
+			</div> 
+			<div class="caption">
+				<p> <%= photo.caption %> </p>
+			</div>
+			<div class="comments">
+				<% comments.forEach(function(comments, index, comment){ %>
+					<% if (photo.photoId == comments.photo_id) { %>
+						<p> <span> <%= comments.created_at %> </span><%= comments.comment %> </p>
+					<% } %>
+				<% }); %>
+
+			</div>
+		</div>
+	</div>
+<% }); %>
+</div>
+
+<% include ../layout/footer %>

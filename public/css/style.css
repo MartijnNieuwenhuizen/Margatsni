@@ -1,0 +1,367 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	background: #eeeeee;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-family: 'Oleo Script', cursive;
+	color: white;
+}
+
+h1 a {
+	color: white;
+}
+
+h2 {
+	margin-bottom: 1.3em;
+}
+
+/* container */
+.container {
+	width: 90%;
+	max-width: 68.75em;
+	margin: 0 auto;
+}
+
+/* header styling */
+header {
+	width: 100%;
+	height: 4.6875em;
+	background: #3f729b;
+	padding: 1.6em 4em;
+	margin-bottom: 3em;
+	border-bottom: 1px solid #1c5380;
+	box-shadow: 1px 1px 3px lightGrey;
+}
+	header > h1 {
+		font-size: 1.5em;
+		display: block;
+		margin-top: -.2em;
+		float: left;
+		color: black;
+
+		text-shadow: 1px 1px 1px black;
+	}
+
+	header > a {
+		display: block;
+		float: right;
+		margin-left: 1.5em;
+		text-decoration: none;
+		color: #f4f4f4;
+		border-bottom: 1px solid rgba(242, 242, 242, 0.3);
+	}
+	header h1 a {
+		text-decoration: none;
+		color: #f4f4f4;
+		color: white;
+		font-weight: 500;
+	}
+
+/* Registreren */
+#registreren {
+	width: 20em;
+}
+
+#bgcontainer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	background: url('../img/background.jpg') no-repeat;
+	background-size: 100%;
+	background-size: cover;
+}
+
+#bgform {
+	width: 30em;
+	padding: 2em;
+	margin: 0 auto;
+	background-color: rgba(242, 242, 242, 0.5);
+	padding-bottom: 2em;
+	padding-top: 2em;
+	margin-top: 8em;
+	background-color: rgba(100,100,100,.2);
+	margin-top: 5em;
+	border-radius: 3px;
+}
+
+	#bgform label {
+		width: 20em;
+		display: block;
+		font-size: 1.4em;
+		font-family: 'josefin slab';
+		font-weight: 600;
+		text-align: center;
+	}
+
+	#bgform input {
+		width: 100%;
+		font-size: 1.1em;
+		padding: 0.8em;
+		margin-bottom: 2em;
+		background-color: rgba(242, 242, 242, 1);
+		outline: 0px;
+		border: 0px inset;
+		outline: 0px;
+		border: 0px inset;
+		color: black;
+		background-color: white;
+	}
+	
+	#bgform input[type="submit"]{
+		background: #3f729b;
+		color: white;
+		margin: 0;
+	}
+
+	#bgform button,
+	input[type="submit"] {
+		width: 15em;
+		display: block;
+		font-size: 1.2em;
+		padding: 0.4em;
+		background-color: rgba(242, 242, 242, 1);
+		border: 1px solid rgba(242, 242, 242, 0.3);
+		margin: 0 auto;
+		color: rgb(137, 137, 137);
+		/*border-radius: 11px;*/
+	}
+
+	#registrerenP  {
+		margin: 0 auto;
+		max-width: 30em;
+		font-size: 2em;
+		margin-bottom: 2em;
+		text-align: center;
+		margin-top: 1em;
+}
+	#bgform input:focus {
+		outline: 0px;
+	}
+
+/* grid */
+.row:before, .row:after, .container:before, .container:after, .cl:after, .cl:before { content: " "; display: table; }
+.row:after, .container:after, .cl:after { clear: both; }
+  
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .col {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .col.full { width: 100%; }
+  .col.half { width: 50%; }
+  .col.third { width: 33.3%; }
+  .col.fourth { width: 25%; }
+
+/* nav list column */
+.row.column .col.third {
+	width: 60%;
+	float: none;
+	margin: 0 auto;
+}
+
+.row.column .col.third .photo-box > .img {
+	height: 25em;
+}
+
+.filter {
+	margin-bottom: 1em;
+}
+
+	.filter a {
+		padding: 1em;
+		display: inline-block;
+		text-indent: -9999px;
+		cursor: pointer;
+	}
+
+	.filter .list {
+		background: white url('../img/list.png') center center no-repeat;
+	}
+
+	.filter .list.active {
+		background: white url('../img/list-active.png') center center no-repeat;
+	}
+
+	.filter .column {
+		background: white url('../img/col.png') center center no-repeat;
+	}
+
+	.filter .column.active {
+		background: white url('../img/col-active.png') center center no-repeat;
+	}
+
+/* Photobox */
+.photo-box {
+	background: #fafafa;
+	border: 1px solid silver;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+	box-shadow: 0 1px 16px rgba(0,0,0,.1);
+	text-align: left;
+
+	margin-bottom: 2em;
+}
+
+	.photo-box > .img {
+		width: 100%;
+		height: 15em;
+		position: relative;
+
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		
+		background-size: cover;
+		-webkit-background-size: cover;
+	}
+
+	.photo-box > form {
+		padding: 1em;
+	}
+
+	.photo-box > form input {
+		height: 3em;
+		width: 100%;
+		padding: .5em;
+	}
+
+	.photo-box .comments {
+		height: 6.2em;
+		overflow: scroll;
+		background: #f6f6f6;
+		border: 1px solid #e6e6e6;
+	}
+
+	.photo-box .comments p {
+		padding: 1em;
+		font-size: .8em;
+		color: #696969;
+	}
+
+	.photo-box .comments p:nth-of-type(2n) {
+		background: #efefef;
+	}
+
+	.photo-box .comments p span {
+		font-size: .8em;
+		margin-right: 1em;
+		font-style: italic;
+		font-weight: 600;
+		color: #3f729b;
+	}
+	.photo-box .comments p span:first-of-type {
+		font-style: normal;
+	}
+	.photo-box .comments p span:last-of-type {
+		float: right;
+	}
+
+	.photo-box .caption {
+		padding: .8em;
+		color: #696969;
+	}
+
+	.box-header {
+		padding: .6em;
+	}
+
+	.box-header p a {
+		font-weight: 600;
+		color: #3f729b;
+	}
+
+
+
+/* Uploaden */
+.image-uploader {
+  width: 100%;
+  height: 165px;
+  background-size: auto;
+  background: url("../img/afbeelding.png") no-repeat center center;
+  border: 1px dashed white;
+  background-color: rgba(0,0,0,0.3);
+  margin-bottom: 1.5em;
+  border-radius: 4px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+	.image-uploader input {
+		width: 100%;
+		height: 400px;
+		margin: 0;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		cursor: pointer;
+	}
+
+/* ===== == = === 48em (720px) === = == ===== */
+@media only screen and (max-width: 65em) {
+	
+	/* grid */
+  	.col {
+    	margin-bottom: 30px;
+  	}
+
+  	.col.half { width: 100%; }
+  	.col.third { width: 50%; }
+  	.col.fourth { width: 100%; }
+
+  	.row.column .col.third {
+		width: 100%;
+	}
+
+	.row.column .col.third .photo-box > .img {
+		height: 25em;
+	}
+
+}
+
+/* ===== == = === 48em (720px) === = == ===== */
+@media only screen and (max-width: 48em) {
+  /* grid */
+  .col {
+    margin-bottom: 30px;
+  }
+
+  .col.half { width: 100%; }
+  .col.third { width: 100%; }
+  .col.fourth { width: 100%; }
+
+  	.row.column .col.third .photo-box > .img {
+		height: 15em;
+	}
+
+}
+
+@media only screen and (max-width: 31.25em) {
+	#bgform {
+		width: 95%;
+	}
+
+}
